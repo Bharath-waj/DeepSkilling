@@ -1,0 +1,16 @@
+<div class="course-card" appHighlight="lightblue" [ngClass]="cardClasses" [ngStyle]="{ 'border-left-color': borderColor }">
+  <div (click)="viewDetails()" class="clickable-area">
+    <h3>{{ course.name }}</h3>
+    <p>Code: {{ course.code }}</p>
+    <p>Credits: {{ course.credits | creditLabel }}</p>
+
+    <span [ngSwitch]="course.gradeStatus" class="badge">
+      <span *ngSwitchCase="'passed'" class="badge badge--passed">Passed</span>
+      <span *ngSwitchCase="'failed'" class="badge badge--failed">Failed</span>
+      <span *ngSwitchDefault class="badge badge--pending">Pending</span>
+    </span>
+  </div>
+
+  <button (click)="toggleExpand()">Show Details</button>
+  <button (click)="onEnrollClick()">{{ (isEnrolled$ | async) ? 'Unenroll' : 'Enroll' }}</button>
+</div>

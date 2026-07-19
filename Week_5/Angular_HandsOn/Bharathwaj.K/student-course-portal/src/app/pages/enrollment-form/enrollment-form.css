@@ -1,0 +1,49 @@
+.enroll-form-container {
+  padding: 2rem;
+  max-width: 400px;
+}
+
+.form-field {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox-field {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.error {
+  color: #b91c1c;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+}
+
+.success-msg {
+  margin-top: 1rem;
+  color: #15803d;
+  font-weight: 500;
+}
+
+.form-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+/* angular auto-adds these classes based on form control state, just
+   hooking into them here instead of writing my own validation classes */
+input.ng-invalid.ng-touched {
+  border-color: red;
+}
+
+input.ng-valid.ng-touched {
+  border-color: green;
+}

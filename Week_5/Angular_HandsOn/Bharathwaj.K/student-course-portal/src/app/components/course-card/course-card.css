@@ -1,0 +1,51 @@
+.course-card {
+  border: 1px solid #d1d5db;
+  border-left: 4px solid grey; /* overridden live by ngStyle */
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 0.5rem;
+  min-width: 200px;
+  transition: all 0.2s ease;
+}
+
+/* toggled by the Show Details button - just makes the card taller for now */
+.course-card.expanded {
+  padding-bottom: 2rem;
+  background-color: #f9fafb;
+}
+
+.card--enrolled {
+  border-color: #16a34a;
+  background-color: #f0fdf4;
+}
+
+.card--full {
+  opacity: 0.85;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  margin: 0.5rem 0;
+}
+
+.badge--passed {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+.badge--failed {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.badge--pending {
+  background-color: #f3f4f6;
+  color: #6b7280;
+}
+
+.clickable-area {
+  cursor: pointer;
+}

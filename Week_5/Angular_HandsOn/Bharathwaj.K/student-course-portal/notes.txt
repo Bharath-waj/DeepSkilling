@@ -1,0 +1,33 @@
+FILE STRUCTURE NOTES — Student Course Portal
+
+angular.json
+- Workspace configuration file. Defines build/serve/test targets, file paths,
+  asset locations, style/script bundling options, and per-environment budgets.
+
+tsconfig.json
+- Root TypeScript compiler configuration shared across the whole workspace
+  (target JS version, strict mode flags, module resolution).
+
+tsconfig.app.json
+- Extends tsconfig.json specifically for the application build; excludes
+  test files (*.spec.ts) from the app compilation.
+
+package.json
+- Lists npm dependencies (Angular packages, RxJS, etc.), devDependencies,
+  and npm scripts like "start", "build", "test".
+
+src/main.ts
+- Application entry point. Bootstraps the root component (standalone) or
+  the AppModule, kicking off the Angular app in the browser.
+
+src/app/app.config.ts (standalone mode, Angular 17+/20)
+- Configures root-level providers (router, HTTP client, etc.) used when
+  bootstrapping a standalone application. Replaces app.module.ts.
+
+src/app/app.component.ts
+- The root component of the application. Its template acts as the shell
+  that hosts <router-outlet> and any always-visible UI like the header.
+
+src/index.html
+- The single HTML page served to the browser. Contains the root
+  <app-root> tag where Angular mounts the entire application.
